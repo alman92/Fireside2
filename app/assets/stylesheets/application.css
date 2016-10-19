@@ -1,15 +1,53 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url("https://media.giphy.com/media/3o72FhIuVWddxQHftS/giphy.gif");
+@import url('https://fonts.googleapis.com/css?family=Tillana');
+
+body{
+  background-image: url("https://media.giphy.com/media/3o72FhIuVWddxQHftS/giphy.gif");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  font-family: "Pacifico", serif;
+  font-size: 121px;
+  color: #67B5F9;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+h2{
+  text-align: center;
+  font-family: "Tillana", serif;
+  color: grey;
+  text-shadow: 1px 1px black;
+}
+
+button {
+  background: #d93434;
+  background-image: -webkit-linear-gradient(top, #d93434, #b8a52b);
+  background-image: -moz-linear-gradient(top, #d93434, #b8a52b);
+  background-image: -ms-linear-gradient(top, #d93434, #b8a52b);
+  background-image: -o-linear-gradient(top, #d93434, #b8a52b);
+  background-image: linear-gradient(to bottom, #d93434, #b8a52b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+}
+
+button:hover {
+  background: #fcec3c;
+  background-image: -webkit-linear-gradient(top, #fcec3c, #d93434);
+  background-image: -moz-linear-gradient(top, #fcec3c, #d93434);
+  background-image: -ms-linear-gradient(top, #fcec3c, #d93434);
+  background-image: -o-linear-gradient(top, #fcec3c, #d93434);
+  background-image: linear-gradient(to bottom, #fcec3c, #d93434);
+  text-decoration: none;
+}

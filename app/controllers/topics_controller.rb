@@ -5,6 +5,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find params[:id]
+    @comment = @topic.comments
   end
 
   def edit
@@ -12,7 +13,7 @@ class TopicsController < ApplicationController
   end
 
   def new
-    @topic = Topic.new
+    @comment = Comment.new
   end
 
   def create
