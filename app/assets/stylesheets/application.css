@@ -1,18 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url("https://media.giphy.com/media/3o72FhIuVWddxQHftS/giphy.gif");
 @import url('https://fonts.googleapis.com/css?family=Tillana');
 
-body{
+.fire{
   background-image: url("https://media.giphy.com/media/3o72FhIuVWddxQHftS/giphy.gif");
   background-repeat: no-repeat, repeat;
   background-size: cover;
+  margin: 0;
+  padding: 0;
+  display:block;
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+  margin: 0;
+}
+
+.new_user{
+  margin: 100px;
+}
+
+.front{
+  background: rgba(0, 0, 0, 0.2);
 }
 
 h1{
   text-align: center;
   font-family: "Pacifico", serif;
   font-size: 121px;
-  color: #67B5F9;
+  color: grey;
+  text-shadow: 1px 1px black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
@@ -24,30 +58,36 @@ h2{
   text-shadow: 1px 1px black;
 }
 
-button {
-  background: #d93434;
-  background-image: -webkit-linear-gradient(top, #d93434, #b8a52b);
-  background-image: -moz-linear-gradient(top, #d93434, #b8a52b);
-  background-image: -ms-linear-gradient(top, #d93434, #b8a52b);
-  background-image: -o-linear-gradient(top, #d93434, #b8a52b);
-  background-image: linear-gradient(to bottom, #d93434, #b8a52b);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Georgia;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-
+header{
+  background-color: black;
+  height: 50px;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
-button:hover {
-  background: #fcec3c;
-  background-image: -webkit-linear-gradient(top, #fcec3c, #d93434);
-  background-image: -moz-linear-gradient(top, #fcec3c, #d93434);
-  background-image: -ms-linear-gradient(top, #fcec3c, #d93434);
-  background-image: -o-linear-gradient(top, #fcec3c, #d93434);
-  background-image: linear-gradient(to bottom, #fcec3c, #d93434);
-  text-decoration: none;
+.login, .logout{
+  position: absolute;
+  top: 0; right:0;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+section.login button {
+  color: #fff;
+  background-color: #6496c8;
+  text-shadow: -1px 1px #417cb8;
+  border: none;
+}
+
+section.login button:hover,
+section.login button.hover {
+  background-color: #346392;
+  text-shadow: -1px 1px #27496d;
+}
+
+section.login button:active,
+section.login button.active {
+  background-color: #27496d;
+  text-shadow: -1px 1px #193047;
 }
