@@ -1,13 +1,19 @@
-<h1>Edit</h1>
+<div class="comment">
+  <div class="issue">
+    <h2>Edit</h2>
 
-  <%= form_for [@topic, @comment] do |f| %>
+      <%= form_for [@topic, @comment] do |f| %>
 
-    <%= f.label :"Choose an Issue which most closely pertains to your comment:" %>
-    <%= f.collection_select :topic_id, Topic.all, :id, :name %>
+        <%= f.label :"Choose an Issue which most closely pertains to your comment:" %>
+        <br>
+        <%= f.collection_select :topic_id, Topic.all, :id, :name %>
+        <br>
 
-    <%= f.label :"Let your local Member of Congress know how you feel:" %>
-    <%= f.text_area :body %>
+        <%= f.label :"Let your local Member of Congress know how you feel:" %>
+        <%= f.text_area :body %>
 
-    <%= f.submit "Edit Comment" %>
+        <%= f.submit "Edit Comment" %>
 
-  <% end %>
+      <% end %>
+  </div>
+</div>

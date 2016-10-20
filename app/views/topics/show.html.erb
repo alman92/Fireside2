@@ -1,29 +1,26 @@
-<h1>Submit a Comment on an Issue</h1>
+<div class="comment">
+  <div class="issue">
+    <h2>Submit a Comment on an Issue</h2>
 
-<table>
-  <tr>
-    <th>Body</th>
-    <th>Options</th>
-  </tr>
+    <table>
+      <tr>
+        <th>Body</th>
+        <th>Options</th>
+      </tr>
 
-  <% @topic.comments.each do |comment|%>
-  <tr>
-    <td><%= comment.body %></td>
-    <td><%= link_to "Edit", edit_topic_comment_path(@topic, comment) %></td>
-    <td><%= link_to "Delete", topic_comment_path(@topic, comment), method: :delete %></td>
-  </tr>
-  <% end %>
-</table>
+      <% @topic.comments.each do |comment|%>
+      <tr>
+        <td><%= comment.body %></td>
+        <td><%= link_to "Edit", edit_topic_comment_path(@topic, comment) %></td>
+        <td><%= link_to "Delete", topic_comment_path(@topic, comment), method: :delete %></td>
+      </tr>
+      <% end %>
+    </table>
 
-<%= @topic.name %>
+    <%= @topic.name %>
 
-<button><a href="/">Return Home</a></button>
-<button><a href="/topics/new">Create New Topic</a></button>
+    <button><a href="/">Return Home</a></button>
+    <button><a href="/topics/new">Create New Topic</a></button>
 
-<button>
-  <%= link_to "Edit Comment", edit_topic_comment_path(@topic, @comment)%>
-</button>
-
-<button>
-  <%= link_to "Delete Comment", topic_comment_path(@topic, @comment), method: :delete %>
-</button>
+  </div>
+</div>
