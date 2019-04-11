@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "topics#index"
 
   resources :topics do
-    resources :comments
+    resources :comments # NHO: you have multiple routes going to the same controller actions, might want to limit the routes made here
   end
 
   resources :comments, only: [:new, :create, :destroy]
